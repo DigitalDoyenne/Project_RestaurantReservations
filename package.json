@@ -5,7 +5,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/Thinkful-Ed/starter-restaurant-reservation"
+    "url": "https://github.com/DigitalDoyenne/Project_Restaurant_Reservations"
   },
   "scripts": {
     "build": "npm -prefix front-end run build",
@@ -46,6 +46,7 @@
     "test:frontend:watch": "npm test --prefix ./front-end"
   },
   "keywords": [],
-  "author": "Thinkful, Inc.",
-  "license": "UNLICENSED"
+  "author": "DigitalDoyenne",
+  "license": "UNLICENSED",
+  "dependencies": {}
 }
