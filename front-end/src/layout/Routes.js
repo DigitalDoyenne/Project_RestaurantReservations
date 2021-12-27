@@ -32,7 +32,7 @@ function Routes() {
   const query = useQuery();
   const date = query.get("date") ? query.get("date") : today();
 
-  useEffect(loadDashboard, [date]);
+  useEffect(loadDashboard, [date, setTablesError]);
 
   ////////// MAIN DASHBOARD RENDERING FUNCTION //////////
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { listReservationsForPhoneNumber } from "../utils/api";
+import ErrorAlert from "../layout/ErrorAlert";
 import ListReservations from "./ListReservations"; // USED TO POPULATE RESULTS FROM SEARCH
 
 export default function Search() {
@@ -24,6 +25,7 @@ export default function Search() {
 
   return (
     <div>
+      <ErrorAlert errors={errors} />
       <h2 className="mt-3 ml-3">Search</h2>
       <form name="reservation" onSubmit={handleSearch}>
         <input
