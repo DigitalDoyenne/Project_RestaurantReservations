@@ -33,14 +33,14 @@ export default function ListTables({ tables, setTables, setReservations }) {
       <div className="card mx-1 my-2" key={table.table_id}>
         <div className="card-body bg-secondary text-light">
           <h4 className="card-title">{table.table_name}</h4>
-          <p className="card-text">{table.capacity}</p>
+          <p className="card-text">Capacity: {table.capacity}</p>
           <p
             data-table-id-status={table.table_id}
             className={`card-text ${
               table.reservation_id ? "text-warning" : "text-success"
             }`}
           >
-            {table.reservation_id ? "occupied" : "free"}
+            {table.reservation_id ? "OCCUPIED" : "OPEN"}
           </p>
           {table.reservation_id ? (
             <button

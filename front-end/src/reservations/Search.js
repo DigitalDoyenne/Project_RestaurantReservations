@@ -32,11 +32,11 @@ export default function Search() {
           className="ml-3"
           type="text"
           name="mobile_number"
-          placeholder="Enter customer's phone number"
+          placeholder="Enter phone number"
           onChange={handleChange}
           value={mobileNumber}
         ></input>
-        <button type="submit" className="btn btn-info m-2 p-3">
+        <button type="submit" className="btn btn-danger m-2 p-3">
           Find
         </button>
       </form>

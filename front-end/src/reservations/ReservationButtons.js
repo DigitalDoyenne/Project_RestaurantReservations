@@ -25,7 +25,7 @@ export default function ReservationButtons({
       <div>
         <Link
           to={`/reservations/${reservation_id}/seat`}
-          className="btn btn-light m-2"
+          className="btn btn-danger m-2"
         >
           Seat
         </Link>

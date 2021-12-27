@@ -31,7 +31,7 @@ function Dashboard({
       </div>
       {/*//////////// PREVIOUS //////////////*/}
       <button
-        className="btn btn-info m-1 p-3"
+        className="btn btn-danger m-1 p-3"
         onClick={() => history.push(`/dashboard?date=${previous(date)}`)}
       >
         Previous
@@ -47,7 +47,7 @@ function Dashboard({
 
       {/*//////////// NEXT //////////////*/}
       <button
-        className="btn btn-info m-1 p-3"
+        className="btn btn-danger m-1 p-3"
         onClick={() => history.push(`/dashboard?date=${next(date)}`)}
       >
         Next
