@@ -25,7 +25,6 @@ function update(reservation_id, status) {
     .where({ reservation_id })
     .update("status", status)
     .returning("*")
-    .then((theNewStuff) => theNewStuff[0]);
 }
 
 function updateReservation(reservation) {

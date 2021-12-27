@@ -32,7 +32,7 @@ function validateFields(req, res, next) {
   if (data.table_name === "" || data.table_name === undefined) {
     return next({
       status: 400,
-      message: "table_name value is missing.",
+      message: `The table_name value is missing.`,
     });
   }
 
@@ -47,11 +47,21 @@ function validateFields(req, res, next) {
   if (tableName.length < 2) {
     return next({
       status: 400,
-      message: "Must include a table_name longer than one character.",
+      message: `Must include a table_name longer than one character.`,
     });
   }
 
   next();
+}
+
+function capacityIsNumber(req, res, next){
+  if (typeof req.body.data.capacity !== "number"){
+    return next({
+      status: 400,
+      message: "The capacity is not a number."
+    })
+  }
+  return next();
 }
 
 ////////// INITIAL UPDATE VALIDATION /////////
@@ -181,7 +191,7 @@ async function destroy(req, res) {
 }
 
 module.exports = {
-  create: [validateFields, asyncErrorBoundary(create)],
+  create: [validateFields, capacityIsNumber, asyncErrorBoundary(create)],
   list: asyncErrorBoundary(list),
   read: [validateFields, asyncErrorBoundary(read)],
   update: [
