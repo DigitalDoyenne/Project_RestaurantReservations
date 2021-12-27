@@ -7,7 +7,7 @@ import { today } from "../utils/date-time";
 import Search from "../reservations/Search";
 import Dashboard from "../dashboard/Dashboard";
 import { Redirect, Route, Switch } from "react-router-dom";
-import NewReservation from "../reservations/NewReservationScratch";
+import NewReservation from "../reservations/NewReservation";
 import SeatReservation from "../reservations/SeatReservation";
 import {
   listReservations,
