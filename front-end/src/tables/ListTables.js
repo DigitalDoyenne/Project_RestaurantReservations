@@ -40,7 +40,7 @@ export default function ListTables({ tables, setTables, setReservations }) {
               table.reservation_id ? "text-warning" : "text-success"
             }`}
           >
-            {table.reservation_id ? "OCCUPIED" : "OPEN"}
+            {table.reservation_id ? "occupied" : "free"}
           </p>
           {table.reservation_id ? (
             <button
